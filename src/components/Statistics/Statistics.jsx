@@ -1,7 +1,5 @@
 // Libs
 import PropTypes from 'prop-types';
-// React components
-import { getRandomHexColor } from 'utils/randomHexColor';
 // Styled components
 import {
   StatisticsCard,
@@ -16,12 +14,7 @@ export function Statistics({ title, stats }) {
       {title && <StatisticsTitle>Upload stats</StatisticsTitle>}
       <StatisticsList>
         {stats.map(item => (
-          <StatisticsItem
-            key={item.id}
-            style={{
-              backgroundColor: getRandomHexColor(),
-            }}
-          >
+          <StatisticsItem key={item.id}>
             <span>{item.label}</span>
             <span>{item.percentage}%</span>
           </StatisticsItem>

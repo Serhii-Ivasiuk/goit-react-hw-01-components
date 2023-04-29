@@ -2,7 +2,6 @@
 import PropTypes from 'prop-types';
 // Styled components
 import {
-  TransactionHistoryWrapper,
   TransactionHistoryTable,
   Tr,
   Th,
@@ -11,27 +10,25 @@ import {
 
 export function TransactionHistory({ items }) {
   return (
-    <TransactionHistoryWrapper>
-      <TransactionHistoryTable>
-        <thead>
-          <Tr>
-            <Th>Type</Th>
-            <Th>Amount</Th>
-            <Th>Currency</Th>
-          </Tr>
-        </thead>
+    <TransactionHistoryTable>
+      <thead>
+        <Tr>
+          <Th>Type</Th>
+          <Th>Amount</Th>
+          <Th>Currency</Th>
+        </Tr>
+      </thead>
 
-        <tbody>
-          {items.map(item => (
-            <Tr key={item.id}>
-              <Td>{item.type}</Td>
-              <Td>{item.amount}</Td>
-              <Td>{item.currency}</Td>
-            </Tr>
-          ))}
-        </tbody>
-      </TransactionHistoryTable>
-    </TransactionHistoryWrapper>
+      <tbody>
+        {items.map(item => (
+          <Tr key={item.id}>
+            <Td>{item.type}</Td>
+            <Td>{item.amount}</Td>
+            <Td>{item.currency}</Td>
+          </Tr>
+        ))}
+      </tbody>
+    </TransactionHistoryTable>
   );
 }
 

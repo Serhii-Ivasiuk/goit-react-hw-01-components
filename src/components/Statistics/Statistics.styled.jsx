@@ -1,6 +1,8 @@
 // Libs
 import styled from '@emotion/styled';
 
+import { getRandomHexColor } from 'utils/randomHexColor';
+
 export const StatisticsCard = styled.section`
   border-radius: 8px;
   color: ${props => props.theme.colors.darkgrey};
@@ -31,4 +33,5 @@ export const StatisticsItem = styled.li`
   box-shadow: 4px 0px 8px -8px rgba(0, 0, 0, 0.75);
   color: ${props => props.theme.colors.white};
   text-shadow: 0px 1px 2px ${props => props.theme.colors.black};
+  background-color: ${getRandomHexColor};
 `;

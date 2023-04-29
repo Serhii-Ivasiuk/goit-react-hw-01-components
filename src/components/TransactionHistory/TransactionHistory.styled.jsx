@@ -1,15 +1,12 @@
 // Libs
 import styled from '@emotion/styled';
 
-export const TransactionHistoryWrapper = styled.div`
-  border-radius: 8px;
-  border: 1px solid ${props => props.theme.colors.white};
-  overflow: hidden;
-`;
-
 export const TransactionHistoryTable = styled.table`
   border-spacing: 0;
   text-align: center;
+  border-radius: 8px;
+  border: 1px solid ${props => props.theme.colors.white};
+  overflow: hidden;
 `;
 
 export const Tr = styled.tr`
