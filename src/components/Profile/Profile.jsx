@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import { ProfileCard } from './Profile.styled';
 
 export function Profile(props) {
   const { avatar, location, stats, tag, username } = props;
 
   return (
-    <div className="profile">
+    <ProfileCard>
       <div className="description">
         <img src={avatar} alt="User avatar" className="avatar" />
         <p className="name">{username}</p>
@@ -20,7 +21,7 @@ export function Profile(props) {
           </li>
         ))}
       </ul>
-    </div>
+    </ProfileCard>
   );
 }
 
