@@ -1,26 +1,37 @@
+// Libs
 import PropTypes from 'prop-types';
-import { ProfileCard } from './Profile.styled';
+// React components
+import {
+  ProfileCard,
+  ProfileDescription,
+  ProfileAvatar,
+  ProfileUserName,
+  ProfileStatsList,
+  ProfileStatsItem,
+  ProfileStatsLabel,
+  ProfileStatsQuantity,
+} from './Profile.styled';
 
 export function Profile(props) {
   const { avatar, location, stats, tag, username } = props;
 
   return (
     <ProfileCard>
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{'@' + tag}</p>
-        <p className="location">{location}</p>
-      </div>
+      <ProfileDescription>
+        <ProfileAvatar src={avatar} alt="User avatar" />
+        <ProfileUserName>{username}</ProfileUserName>
+        <p>@{tag}</p>
+        <p>{location}</p>
+      </ProfileDescription>
 
-      <ul className="stats">
+      <ProfileStatsList>
         {Object.keys(stats).map(item => (
-          <li key={item}>
-            <span className="label">{item}</span>
-            <span className="quantity">{stats[item]}</span>
-          </li>
+          <ProfileStatsItem key={item}>
+            <ProfileStatsLabel>{item}</ProfileStatsLabel>
+            <ProfileStatsQuantity>{stats[item]}</ProfileStatsQuantity>
+          </ProfileStatsItem>
         ))}
-      </ul>
+      </ProfileStatsList>
     </ProfileCard>
   );
 }
