@@ -7,9 +7,7 @@ import {
   FriendListAvatar,
 } from './FriendListItem.styled';
 
-export function FriendListItem(props) {
-  const { avatar, name, isOnline } = props;
-
+export function FriendListItem({ avatar, name, isOnline }) {
   return (
     <FriendListCard>
       <FriendListStatus isOnline={isOnline} />

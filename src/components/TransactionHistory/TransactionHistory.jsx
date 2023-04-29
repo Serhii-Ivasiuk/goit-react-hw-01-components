@@ -9,9 +9,7 @@ import {
   Td,
 } from './TransactionHistory.styled';
 
-export function TransactionHistory(props) {
-  const { items } = props;
-
+export function TransactionHistory({ items }) {
   return (
     <TransactionHistoryWrapper>
       <TransactionHistoryTable>

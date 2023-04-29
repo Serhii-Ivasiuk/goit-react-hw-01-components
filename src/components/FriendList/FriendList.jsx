@@ -5,9 +5,7 @@ import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 // Styled components
 import { FriendListContainer } from './FriendList.styled';
 
-export function FriendList(props) {
-  const { friends } = props;
-
+export function FriendList({ friends }) {
   return (
     <FriendListContainer>
       {friends.map(item => (

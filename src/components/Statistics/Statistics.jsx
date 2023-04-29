@@ -10,9 +10,7 @@ import {
   StatisticsItem,
 } from './Statistics.styled';
 
-export function Statistics(props) {
-  const { title, stats } = props;
-
+export function Statistics({ title, stats }) {
   return (
     <StatisticsCard stats={stats}>
       {title && <StatisticsTitle>Upload stats</StatisticsTitle>}

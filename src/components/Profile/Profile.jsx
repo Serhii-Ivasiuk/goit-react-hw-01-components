@@ -12,9 +12,7 @@ import {
   ProfileStatsQuantity,
 } from './Profile.styled';
 
-export function Profile(props) {
-  const { avatar, location, stats, tag, username } = props;
-
+export function Profile({ avatar, location, stats, tag, username }) {
   return (
     <ProfileCard>
       <ProfileDescription>
